@@ -1,0 +1,49 @@
+<div class="container">
+   <div class="row">
+      <form (submit)="submit()">
+         <div class="mb-3">
+           <label class="form-label">Full Name</label>
+           <input name="fullname" class="form-control" [(ngModel)]="teacher.fullname">
+         </div>
+
+         <div class="mb-3">
+            <label class="form-label">Age</label>
+            <input name="age" class="form-control" [(ngModel)]="teacher.age">
+          </div>
+
+         <div class="mb-3">
+            <label class="form-label">City</label>
+            <input name="city" class="form-control" [(ngModel)]="teacher.city">
+          </div>
+
+         <div class="mb-3">
+            <label class="form-label">Years of Experience</label>
+            <input name="experienceYears" class="form-control" [(ngModel)]="teacher.experienceYears">
+          </div>
+
+         <div class="mb-3">
+            <label class="form-label">Hours Per Month</label>
+            <input name="hoursPerMonth" class="form-control" [(ngModel)]="teacher.hoursPerMonth">
+          </div>
+
+         <div class="mb-3">
+            <label class="form-label">Hour Salary</label>
+            <input name="hourSalary" class="form-control" [(ngModel)]="teacher.hourSalary">
+         </div>
+
+
+         <div class="mb-3">
+            <label class="form-label">Profession</label>
+
+            <div class="row">
+               <div class="col-3" *ngFor="let profession of teacher.professions; let i = index">
+                  <input [name]="teacher.professions[i]" class="form-control" [(ngModel)]="teacher.professions[i]">
+               </div>
+            </div>
+
+         </div>
+
+         <button type="submit" class="btn btn-success">Save</button>
+       </form>
+   </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="container">
+   <div class="row">
+      <table class="table">
+         <thead>
+            <tr>
+               <th scope="col"></th>
+               <th scope="col">ID</th>
+               <th scope="col">Full Name</th>
+               <th scope="col">Age</th>
+               <th scope="col">City</th>
+               <th scope="col">Class</th>
+               <th scope="col">Grades Avg</th>
+               <th scope="col"></th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr *ngFor="let pupil of pupils" [ngClass]="pupil.gradesAvg > 65 ? 'pupil-blue' : 'pupil-red'">
+               <th scope="row">
+                  <img class="pupil-image" [src]="pupil.image" />
+               </th>
+               <th>{{pupil.id}}</th>
+               <td>{{pupil.fullname}}</td>
+               <td>{{pupil.age}}</td>
+               <td>{{pupil.city}}</td>
+               <td>{{pupil.class?.name}}</td>
+               <td>{{pupil.gradesAvg}}</td>
+               <td><button class="btn btn-primary btn-sm" (click)="goToEdit(pupil.id)">Edit</button></td>
+            </tr>
+         </tbody>
+       </table>
+   </div>
+</div>

@@ -1,0 +1,14 @@
+.employee-image {
+   width: 100px;
+   height: 100px;
+   object-fit: cover;
+}
+
+.employee-blue {
+   background: rgba(0, 0, 255, 0.1);
+}
+
+.employee-red {
+   background: rgba(255, 0, 0, 0.2);
+}
+

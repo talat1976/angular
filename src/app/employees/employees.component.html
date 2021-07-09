@@ -1,0 +1,28 @@
+<div class="container">
+   <div class="row">
+      <table class="table">
+         <thead>
+            <tr>
+               <th scope="col"></th>
+               <th scope="col">ID</th>
+               <th scope="col">Full Name</th>
+               <th scope="col">Age</th>
+               <th scope="col">City</th>
+               <th scope="col">Salary</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr *ngFor="let employee of employees" [ngClass]="employee.monthSalary > 3000 ? 'employee-blue' : 'employee-red'">
+               <th scope="row">
+                  <img class="employee-image" [src]="employee.image" />
+               </th>
+               <th>{{employee.id}}</th>
+               <td>{{employee.fullname}}</td>
+               <td>{{employee.age}}</td>
+               <td>{{employee.city}}</td>
+               <td>{{employee.monthSalary | currency}}</td>
+            </tr>
+         </tbody>
+       </table>
+   </div>
+</div>

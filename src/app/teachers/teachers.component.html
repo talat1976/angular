@@ -1,0 +1,23 @@
+<div class="container">
+   <div class="row">
+
+      <div class="col-4 mb-4" *ngFor="let teacher of teachers">
+         <div class="card">
+            <img [src]="teacher.image" class="card-img-top" alt="...">
+            <div class="card-body">
+               <h5 class="card-title">{{teacher.fullname}}</h5>
+               <div>Age: {{teacher.age}}</div>
+               <div>City: {{teacher.city}}</div>
+               <div>Years of Experience: {{teacher.experienceYears}}</div>
+               <div>Hours Per Month: {{teacher.hoursPerMonth}}</div>
+               <div>Hour Salary: {{teacher.hourSalary}}</div>
+               <div>Profession: {{teacher.professions}}</div>
+               <hr />
+               <div>Month Salary: {{teacher.hoursPerMonth * teacher.hourSalary | currency}}</div>
+               <button (click)="goToEdit(teacher.id)" class="btn btn-primary btn-sm mt-3">Edit</button>
+            </div>
+         </div>
+      </div>
+
+   </div>
+</div>

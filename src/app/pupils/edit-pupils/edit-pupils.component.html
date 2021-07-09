@@ -1,0 +1,22 @@
+<div class="container">
+   <div class="row">
+      <form (submit)="submit()">
+         <div class="mb-3">
+           <label class="form-label">Full Name</label>
+           <input name="fullname" class="form-control" [(ngModel)]="pupil.fullname">
+         </div>
+
+         <div class="mb-3">
+            <label class="form-label">Age</label>
+            <input name="age" class="form-control" [(ngModel)]="pupil.age">
+          </div>
+
+         <div class="mb-3">
+            <label class="form-label">City</label>
+            <input name="city" class="form-control" [(ngModel)]="pupil.city">
+          </div>
+
+         <button type="submit" class="btn btn-success">Save</button>
+       </form>
+   </div>
+</div>
